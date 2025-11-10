@@ -12,3 +12,9 @@ toss_coin <- function() {
 
 # Call your function
 toss_coin()
+
+coin_sides <- c("head", "tail")
+n_flips <- 10
+
+# Sample from coin_sides n_flips times with replacement
+sample(coin_sides, n_flips, replace=TRUE)
