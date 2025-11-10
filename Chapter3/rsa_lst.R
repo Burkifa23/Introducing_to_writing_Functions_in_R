@@ -13,3 +13,9 @@ rsa_env <- list2env(rsa_lst)
 
 # List the structure of each variable
 ls.str(rsa_env)
+
+# Find the parent environment of rsa_env
+parent <- parent.env(rsa_env)
+
+# Print its name
+environmentName(parent)
