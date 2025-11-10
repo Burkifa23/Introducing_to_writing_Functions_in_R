@@ -19,3 +19,9 @@ groom_model<- function(model) {
     observations = augment(model)
   )
 }
+
+# Call groom_model on model, assigning to 3 variables
+c(mdl, cff, obs) %<-% groom_model(model)
+
+# See these individual variables
+mdl; cff; obs
