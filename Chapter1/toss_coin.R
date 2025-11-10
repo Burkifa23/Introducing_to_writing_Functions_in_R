@@ -27,3 +27,13 @@ toss_coin <- function(n_flips) {
 
 # Generate 10 coin tosses
 toss_coin(10)
+
+coin_sides <- c("head", "tail")
+n_flips <- 10
+p_head <- 0.8
+
+# Define a vector of weights
+weights <- p_head
+
+# Update so that heads are sampled with prob p_head
+sample(coin_sides, n_flips, replace = TRUE, prob = c(p_head,1-p_head))
