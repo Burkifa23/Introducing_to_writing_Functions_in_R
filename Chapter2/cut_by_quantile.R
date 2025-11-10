@@ -1,6 +1,7 @@
 # Set the default for n to 5
 # Set the default for na.rm to FALSE
-cut_by_quantile <- function(x, n = 5, na.rm=FALSE, labels, interval_type) {
+# Set the default for labels to NULL
+cut_by_quantile <- function(x, n = 5, na.rm=FALSE, labels=NULL, interval_type) {
   probs <- seq(0, 1, length.out = n + 1)
   qtiles <- quantile(x, probs, na.rm = na.rm, names = FALSE)
   right <- switch(interval_type, "(lo, hi]" = TRUE, "[lo, hi)" = FALSE)
