@@ -27,3 +27,12 @@ fortify_with_metric_units <- function(data, crop) {
 
 # Try it on the wheat dataset
 fortify_with_metric_units(wheat, crop = "wheat")
+
+
+
+# Using corn, plot yield (kg/ha) vs. year
+ggplot(corn, aes(x=year, y=yield_kg_per_ha)) +
+  # Add a line layer, grouped by state
+  geom_line(aes(group = state)) +
+  # Add a smooth trend layer
+  geom_smooth()
