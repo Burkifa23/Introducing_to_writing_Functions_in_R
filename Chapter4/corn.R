@@ -78,3 +78,8 @@ plot_yield_vs_year_by_region <- function(data) {
 
 # Try it on the wheat dataset
 plot_yield_vs_year_by_region(wheat)
+
+
+
+# Run a generalized additive model of yield vs. smoothed year and census region
+mgcv::gam(yield_kg_per_ha ~ s(year) + census_region, data = corn)
