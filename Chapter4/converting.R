@@ -12,3 +12,14 @@ yards_to_meters <- function(yards) {
 sq_meters_to_hectares <- function(sq_meters) {
     sq_meters / 10000
 }
+
+# Write a function to convert sq. yards to sq. meters
+sq_yards_to_sq_meters <- function(sq_yards) {
+  sq_yards %>%
+    # Take the square root
+    sqrt() %>%
+    # Convert yards to meters
+    yards_to_meters() %>%
+    # Square it
+    magrittr::raise_to_power(2)
+}
