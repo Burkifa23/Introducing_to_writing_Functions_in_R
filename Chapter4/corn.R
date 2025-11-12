@@ -131,3 +131,5 @@ fortified_barley <- barley %>%
 # See the result
 glimpse(fortified_barley)
 
+# Plot yield vs. year by region
+plot_yield_vs_year_by_region(fortified_barley)
