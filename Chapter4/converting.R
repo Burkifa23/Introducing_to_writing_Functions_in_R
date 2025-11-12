@@ -60,3 +60,13 @@ bushels_to_lbs <- function(bushels, crop) {
     # Multiply by the no. of bushels
     magrittr::multiply_by(bushels)
 }
+
+
+# Write a function to convert bushels to kg
+bushels_to_kgs <- function(bushels, crop) {
+  bushels %>%
+    # Convert bushels to lbs for this crop
+    bushels_to_lbs(crop) %>%
+    # Convert lbs to kgs
+    lbs_to_kgs()
+}
