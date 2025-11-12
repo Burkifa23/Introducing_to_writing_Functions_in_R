@@ -23,3 +23,14 @@ sq_yards_to_sq_meters <- function(sq_yards) {
     # Square it
     magrittr::raise_to_power(2)
 }
+
+# Write a function to convert acres to hectares
+acres_to_hectares <- function(acres) {
+  acres %>%
+    # Convert acres to sq yards
+    acres_to_sq_yards() %>%
+    # Convert sq yards to sq meters
+    sq_yards_to_sq_meters()  %>%
+    # Convert sq meters to hectares
+    sq_meters_to_hectares()
+}
