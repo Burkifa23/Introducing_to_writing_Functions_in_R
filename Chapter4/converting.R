@@ -34,3 +34,14 @@ acres_to_hectares <- function(acres) {
     # Convert sq meters to hectares
     sq_meters_to_hectares()
 }
+
+# Define a harmonic acres to hectares function
+harmonic_acres_to_hectares <- function(acres) {
+  acres %>% 
+    # Get the reciprocal
+    get_reciprocal() %>%
+    # Convert acres to hectares
+    acres_to_hectares() %>% 
+    # Get the reciprocal again
+    get_reciprocal
+}
