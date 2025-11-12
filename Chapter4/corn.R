@@ -121,3 +121,13 @@ predict_yields <- function(model, year) {
 
 # Try it on the wheat dataset
 predict_yields(wheat_model, year=2050)
+
+fortified_barley <- barley %>% 
+  # Fortify with metric units
+  fortify_with_metric_units() %>%
+  # Fortify with census regions
+  fortify_with_census_region()
+
+# See the result
+glimpse(fortified_barley)
+
